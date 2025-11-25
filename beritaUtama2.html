@@ -73,6 +73,19 @@
             color: #6c757d;
         }
 
+        /* ******************************************************** */
+        /* START: MODIFIKASI TAMBAHAN UNTUK TAUTAN BREADCRUMB */
+        /* Tautan di breadcrumb menggunakan text-secondary (#6c757d) */
+        .breadcrumb a {
+            color: #6c757d !important;
+        }
+        .breadcrumb a:hover {
+            color: #0d6efd !important; /* Ubah warna biru saat di-hover */
+        }
+        /* END: MODIFIKASI TAMBAHAN */
+        /* ******************************************************** */
+
+
         .article-title {
             font-size: 1.5rem;
             font-weight: 500;
@@ -180,87 +193,80 @@
 
     <nav
         class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm fixed-top"
-        > 
-        <div class="container-fluid">
+        > <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="logo.png.png" alt="Logo" width="50" height="50" class="me-2" />
-                <div>
-                    <span class="brand-title d-block"
-                    >Laboratorium Business Analytics</span
-                    >
-                    <small class="brand-tagline"
-                    >Transforming Data Into Decisions</small
-                    >
-                </div>
+            <img src="logo.png.png" alt="Logo" width="50" height="50" class="me-2" />
+            <div>
+                <span class="brand-title d-block"
+                >Laboratorium Business Analytics</span
+                >
+                <small class="brand-tagline"
+                >Transforming Data Into Decisions</small
+                >
+            </div>
             </a>
             <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#mainNavbar"
-                aria-controls="mainNavbar"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
             >
-                <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="mainNavbar">
-                
-                <ul class="navbar-nav mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Beranda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Profil</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a
-                            class="nav-link dropdown-toggle"
-                            href="#"
-                            id="navbarDropdownPublikasi"
-                            role="button"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                        >
-                            Publikasi
-                        </a>
-                        <ul
-                            class="dropdown-menu"
-                            aria-labelledby="navbarDropdownPublikasi"
-                        >
-                            <li><a class="dropdown-item" href="#">Publikasi 1</a></li>
-                            <li><a class="dropdown-item" href="#">Publikasi 2</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a
-                            class="nav-link dropdown-toggle"
-                            href="#"
-                            id="navbarDropdownPeminjaman"
-                            role="button"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                        >
-                            Peminjaman Lab
-                        </a>
-                        <ul
-                            class="dropdown-menu"
-                            aria-labelledby="navbarDropdownPeminjaman"
-                        >
-                            <li><a class="dropdown-item" href="#">Formulir</a></li>
-                            <li><a class="dropdown-item" href="#">Jadwal Lab</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Kontak</a>
-                    </li>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                <a class="nav-link" href="#">Beranda</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Profil</a>
+                </li>
+                <li class="nav-item dropdown">
+                <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdownPublikasi"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                >
+                    Publikasi
+                </a>
+                <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownPublikasi"
+                >
+                    <li><a class="dropdown-item" href="#">Publikasi 1</a></li>
+                    <li><a class="dropdown-item" href="#">Publikasi 2</a></li>
                 </ul>
-                
-                <div class="d-flex ms-auto">
-                    <a class="btn btn-outline-secondary me-2" href="#">CMS</a>
-                    <a class="btn btn-primary" href="#">Login</a>
-                </div>
-                </div>
+                </li>
+                <li class="nav-item dropdown">
+                <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdownPeminjaman"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                >
+                    Peminjaman Lab
+                </a>
+                <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownPeminjaman"
+                >
+                    <li><a class="dropdown-item" href="#">Formulir</a></li>
+                    <li><a class="dropdown-item" href="#">Jadwal Lab</a></li>
+                </ul>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Kontak</a>
+                </li>
+            </ul>
+            </div>
         </div>
     </nav>
     <div class="container-xl">
@@ -268,9 +274,9 @@
             
             <div class="col-lg-7">
                 <div class="breadcrumb mb-2">
-                    Beranda / Berita /
+                    <a href="#" class="text-decoration-none">Beranda</a> / 
+                    <a href="berita.html" class="text-decoration-none">Berita</a> /
                 </div>
-
                 <h1 class="article-title">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</h1>
 
                 <div class="meta-info">
